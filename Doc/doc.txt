@@ -1,0 +1,26 @@
+------------------------------------
+-  change default Python version   -
+------------------------------------
+pi@raspberrypi:~ $ sudo update-alternatives --install /usr/bin/python python /usr/bin/python2.7 1
+update-alternatives: using /usr/bin/python2.7 to provide /usr/bin/python (python) in auto mode
+pi@raspberrypi:~ $ sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.7 2
+update-alternatives: using /usr/bin/python3.7 to provide /usr/bin/python (python) in auto mode
+pi@raspberrypi:~ $ sudo update-alternatives --list python
+/usr/bin/python2.7
+/usr/bin/python3.7
+pi@raspberrypi:~ $ python --version
+Python 3.7.3
+
+------------------------------------
+- install lib for accelerometer H3LIS331DL
+- https://www.instructables.com/Measurement-of-Acceleration-Using-H3LIS331DL-and-R/
+------------------------------------
+pip install smbus-cffi==0.5.1
+
+------------------------------------
+- Testing I2C
+- https://learn.adafruit.com/adafruits-raspberry-pi-lesson-4-gpio-setup/configuring-i2c
+------------------------------------
+sudo i2cdetect -y 1
+
+address: Hex 19

@@ -1,0 +1,14 @@
+[Unit]
+Description=TDI http-service send data
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python -u http-server.py
+WorkingDirectory=/home/pi/Desktop/project/src
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target

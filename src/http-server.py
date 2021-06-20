@@ -18,9 +18,9 @@ FILE_NAME="data.txt"
 DATA_FOLDER="data"
 TMP_FOLDER="tmp"
 
-ledGreen = digitalio.DigitalInOut(board.D13)
+ledGreen = digitalio.DigitalInOut(board.D22)
 ledGreen.direction = digitalio.Direction.OUTPUT
-ledRed = digitalio.DigitalInOut(board.D15)
+ledRed = digitalio.DigitalInOut(board.D27)
 ledRed.direction = digitalio.Direction.OUTPUT
 #ledBlue = digitalio.DigitalInOut(board.PA6)
 #ledBlue.direction = digitalio.Direction.OUTPUT

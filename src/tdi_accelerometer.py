@@ -19,7 +19,7 @@ deviceId = 3
 # create a fixed size deque to store .5 seconds of samples @ 500 samples/second
 dq = deque(maxlen=50)
 
-led = digitalio.DigitalInOut(board.D11)
+led = digitalio.DigitalInOut(board.D17)
 led.direction = digitalio.Direction.OUTPUT
 
 i2c = board.I2C()  # uses board.SCL and board.SDA

@@ -18,9 +18,39 @@ Python 3.7.3
 pip install smbus-cffi==0.5.1
 
 ------------------------------------
+- install lib from Adafruit
+https://learn.adafruit.com/adafruit-h3lis331-and-lis331hh-high-g-3-axis-accelerometers/python-circuitpython
+------------------------------------
+
+pip3 install adafruit-circuitpython-busdevice
+pip3 install adafruit-circuitpython-lis331
+
+pip3 install adafruit-circuitpython-register
+pip3 install Adafruit-Blinka
+------------------------------------
 - Testing I2C
 - https://learn.adafruit.com/adafruits-raspberry-pi-lesson-4-gpio-setup/configuring-i2c
 ------------------------------------
 sudo i2cdetect -y 1
 
+------------------------------------
+--PCF8523
+--https://learn.adafruit.com/adding-a-real-time-clock-to-raspberry-pi/set-up-and-test-i2c
+------------------------------------
+sudo i2cdetect -y 1
+
+sudo apt-get -y remove fake-hwclock
+sudo update-rc.d -f fake-hwclock remove
+sudo systemctl disable fake-hwclock
+
+sudo nano /lib/udev/hwclock-set
+
+sudo hwclock -r
+date
+sudo hwclock -w
+
+------------------------------------
+
+
 address: Hex 19
+

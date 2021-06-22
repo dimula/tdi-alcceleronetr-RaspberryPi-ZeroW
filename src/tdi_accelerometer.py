@@ -94,7 +94,7 @@ while 1:
     try:
         g=getG()
         dq.append(g)
-        if g[0] > THRESHOLD or g[1] > THRESHOLD or g[2] > THRESHOLD:
+        if abs(g[0]) > THRESHOLD or abs(g[1]) > THRESHOLD or abs(g[2]) > THRESHOLD:
             for _ in range(25):
                 g=getG()
                 dq.append(g)
